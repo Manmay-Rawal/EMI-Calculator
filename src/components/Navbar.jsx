@@ -19,10 +19,10 @@ import { MdMenu } from "react-icons/md";
 
 const navigation = {
   pages:[
-    { name: "HOME", href: "/Loan-calculator" },
-    { name: "EXCHANGE RATE (API)", href: "/Loan-calculator/Exchange_Rate_Live" },
-    { name: "ABOUT", href: "/Loan-calculator/about" },
-    { name: "ERROR PAGE", href: "/Loan-calculator/Error_Page" },
+    { name: "HOME", href: "/" },
+    { name: "EXCHANGE RATE (API)", href: "/Exchange_Rate_Live" },
+    { name: "ABOUT", href: "/about" },
+    { name: "ERROR PAGE", href: "/Error_Page" },
   ],
 }
 
@@ -38,13 +38,6 @@ function Navbar({ darkMode, setDarkMode }) {
     setAnchorElNav(null);
   };
 
-  // const [darkMode, setDarkMode] = useState(false);
-
-  // const toggleDarkMode = () => {
-  //   setDarkMode(!darkMode);
-  //   document.body.style.backgroundColor = !darkMode ? "#121212" : "#fff";
-  //   document.body.style.color = !darkMode ? "#fff" : "#000";
-  // };
   
     const toggleDarkMode = () => {
       setDarkMode(!darkMode);

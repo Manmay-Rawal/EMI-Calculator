@@ -3,7 +3,7 @@ import { Box, Typography, Grid, Button } from "@mui/material";
 
 const ErrorPage = () => {
   const navigation = {
-    pages: [{ name: "HOME", href: "/Loan-calculator/" }],
+    pages: [{ name: "HOME", href: "/" }],
   };
 
   return (
