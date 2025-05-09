@@ -19,10 +19,10 @@ import { MdMenu } from "react-icons/md";
 
 const navigation = {
   pages:[
-    { name: "HOME", href: "/" },
-    { name: "EXCHANGE RATE (API)", href: "/Exchange_Rate_Live" },
-    { name: "ABOUT", href: "/about" },
-    { name: "ERROR PAGE", href: "/Error_Page" },
+    { name: "HOME", href: "/EMI-Calculator/" },
+    { name: "EXCHANGE RATE (API)", href: "/EMI-Calculator/Exchange_Rate_Live" },
+    { name: "ABOUT", href: "/EMI-Calculator/about" },
+    { name: "ERROR PAGE", href: "/EMI-Calculator/Error_Page" },
   ],
 }
 
