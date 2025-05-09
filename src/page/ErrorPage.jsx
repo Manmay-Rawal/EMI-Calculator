@@ -27,7 +27,7 @@ const ErrorPage = () => {
             variant="contained"
             color="primary"
             component={Link}
-            to={page.href}
+            to={page.link}
             key={page.name}
           >
             Go Home
