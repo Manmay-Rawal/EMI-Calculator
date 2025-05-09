@@ -28,9 +28,10 @@ const navigation = {
   ],
 }
 
-const navigate = useNavigate();
+
 
 function Navbar({ darkMode, setDarkMode }) {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
