@@ -15,14 +15,15 @@ import {
 } from "@mui/material";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { MdMenu } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 
 const navigation = {
   pages:[
-    { name: "HOME", href: "/EMI-Calculator/" },
-    { name: "EXCHANGE RATE (API)", href: "/EMI-Calculator/Exchange_Rate_Live" },
-    { name: "ABOUT", href: "/EMI-Calculator/about" },
-    { name: "ERROR PAGE", href: "/EMI-Calculator/Error_Page" },
+    { name: "HOME", link: "/EMI-Calculator/" },
+    { name: "EXCHANGE RATE (API)", link: "/EMI-Calculator/Exchange_Rate_Live" },
+    { name: "ABOUT", link: "/EMI-Calculator/about" },
+    { name: "ERROR PAGE", link: "/EMI-Calculator/Error_Page" },
   ],
 }
 
@@ -86,7 +87,7 @@ function Navbar({ darkMode, setDarkMode }) {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {navigation.pages.map((page) => (
-                <MenuItem key={page.name} href={page.href} component="a" onClick={handleCloseNavMenu}>
+                <MenuItem key={page.name} component={Link} href={page.link} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
@@ -117,8 +118,10 @@ function Navbar({ darkMode, setDarkMode }) {
             {navigation.pages.map((page) => (
               
               <Button
+
                 key={page.name}
-                href={page.href}
+                component={Link}
+                href={page.link}
                 
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
