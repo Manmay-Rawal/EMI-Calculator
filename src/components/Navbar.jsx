@@ -87,7 +87,7 @@ function Navbar({ darkMode, setDarkMode }) {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {navigation.pages.map((page) => (
-                <MenuItem key={page.name} component={Link} href={page.link} onClick={handleCloseNavMenu}>
+                <MenuItem key={page.name} component={Link} to={page.link} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
@@ -121,7 +121,7 @@ function Navbar({ darkMode, setDarkMode }) {
 
                 key={page.name}
                 component={Link}
-                href={page.link}
+                to={page.link}
                 
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
