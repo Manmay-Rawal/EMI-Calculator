@@ -1,9 +1,10 @@
 import React from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   const navigation = {
-    pages: [{ name: "HOME", href: "/" }],
+    pages: [{ name: "HOME", link: "/EMI-Calculator/" }],
   };
 
   return (
@@ -25,7 +26,8 @@ const ErrorPage = () => {
           <Button
             variant="contained"
             color="primary"
-            href={page.href}
+            component={Link}
+            to={page.href}
             key={page.name}
           >
             Go Home
