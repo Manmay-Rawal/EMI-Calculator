@@ -211,7 +211,7 @@ const Calculator = () => {
       )}
 
       {convertedSchedule.length > 0 && (
-        <Paper sx={{ width: "100%", overflow: "hidden" }} mt={5}>
+        <Paper sx={{ width: "100%", overflow: "hidden", padding: "24px" }} mt={5}>
           <Grid container spacing={2}>
             <Grid
               size={{ xs: 6 }}
