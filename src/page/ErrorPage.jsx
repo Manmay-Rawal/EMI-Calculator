@@ -1,10 +1,11 @@
 import React from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
+  const navigate =  useNavigate();
   const navigation = {
-    pages: [{ name: "HOME", link: "/EMI-Calculator/" }],
+    pages: [{ name: "HOME", path: "/EMI-Calculator/" }],
   };
 
   return (
@@ -26,9 +27,8 @@ const ErrorPage = () => {
           <Button
             variant="contained"
             color="primary"
-            component={Link}
-            to={page.link}
             key={page.name}
+            onClick={()=>navigate(page.path)}
           >
             Go Home
           </Button>

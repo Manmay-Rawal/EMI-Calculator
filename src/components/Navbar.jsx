@@ -15,18 +15,20 @@ import {
 } from "@mui/material";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { MdMenu } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 
 const navigation = {
   pages:[
-    { name: "HOME", link: "/EMI-Calculator/" },
-    { name: "EXCHANGE RATE (API)", link: "/EMI-Calculator/Exchange_Rate_Live" },
-    { name: "ABOUT", link: "/EMI-Calculator/about" },
-    { name: "ERROR PAGE", link: "/EMI-Calculator/Error_Page" },
+    { name: "HOME", path: "/EMI-Calculator/" },
+    { name: "EXCHANGE RATE (API)", path: "/EMI-Calculator/Exchange_Rate_Live" },
+    { name: "ABOUT", path: "/EMI-Calculator/about" },
+    { name: "ERROR PAGE", path: "/EMI-Calculator/Error_Page" },
   ],
 }
 
+const navigate = useNavigate();
 
 function Navbar({ darkMode, setDarkMode }) {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -87,7 +89,7 @@ function Navbar({ darkMode, setDarkMode }) {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {navigation.pages.map((page) => (
-                <MenuItem key={page.name} component={Link} to={page.link} onClick={handleCloseNavMenu}>
+                <MenuItem key={page.name} onClick={()=>{handleCloseNavMenu(),navigate(page.path)}}>
                   <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
@@ -120,10 +122,7 @@ function Navbar({ darkMode, setDarkMode }) {
               <Button
 
                 key={page.name}
-                component={Link}
-                to={page.link}
-                
-                onClick={handleCloseNavMenu}
+                onClick={()=>{handleCloseNavMenu(),navigate(page.path)}}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page.name}
